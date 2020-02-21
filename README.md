@@ -8,3 +8,5 @@
 
 `dart SpaceCraft.dart`
 
+![SpaceCraftProgram.png](https://raw.githubusercontent.com/munyaJ/SpaceCraft/master/SpaceCraftProgram.PNG)
+
