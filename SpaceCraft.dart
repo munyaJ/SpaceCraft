@@ -30,16 +30,18 @@ class Spacecraft {
       Colorize displayText = Colorize('Spacecraft: $name');
       if (color == Color.blue) {
         displayText.blue();
+        displayText.bgGreen();
       }
       else if (color == Color.red) {
         displayText.red();
+        displayText.bgGreen();
       }
       else if (color == Color.magenta) {
         displayText.magenta();
+        displayText.bgGreen();
       }
 
     print(displayText);
-    //print('color: $color');
     print(typesOfColor(color));
     if (launchDate != null) {
       int years =
@@ -65,9 +67,6 @@ main() {
   var voyager3 = new Spacecraft.unlaunched('Voyager III');
   voyager3.describe("Description: Voyager 3 would have been Mariner 13, before the name of the mission was changed.");
 
-
-//String color = typesOfColor(Color.grey);
-    //print(color);
 
 }
 
