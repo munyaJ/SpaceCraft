@@ -1,3 +1,5 @@
+
+
 import 'package:colorize/colorize.dart';
 
 enum Color {red, orange, yellow, green, blue, purple, brown, magenta, tan, cyan, olive, maroon, navy, aquamarine, turquoise, silver, lime, teal, indigo, violet, pink, black, white, grey}
@@ -6,18 +8,20 @@ class Spacecraft {
   String name;
   DateTime launchDate;
   Color color;
+  static String description;
   
 
   // Constructor, with syntactic sugar for assignment to members.
-  Spacecraft(String name1, DateTime launchDate1, Color color1) {
+  Spacecraft(String name1, DateTime launchDate1, Color color1, String description1) {
     // Initialization code goes here.
     name = name1;
     launchDate = launchDate1;
     color = color1;
+    description = description1;
   }
 
   // Named constructor that forwards to the default one.
-  Spacecraft.unlaunched(String name) : this(name, null, Color.magenta);
+  Spacecraft.unlaunched(String name, String description) : this(name, null, Color.magenta, description);
 
 
   int get launchYear =>
@@ -51,6 +55,7 @@ class Spacecraft {
     } else {
       print('Unlaunched');
     }
+    print(description);
     if (specialMessage!=null) {
       print(specialMessage);
     }
@@ -58,16 +63,18 @@ class Spacecraft {
 } 
 
 main() {
-  Spacecraft voyager = new Spacecraft('Voyager I', new DateTime(1977, 9, 5), Color.blue);
-  voyager.describe('Description: Voyager 1 is a space probe launched by NASA on September 5, 1977. Part of the Voyager program to study the outer Solar System.');
 
-  Spacecraft marsRover = new Spacecraft('Mars Rover', new DateTime(2011, 11, 27, 7, 2), Color.red);
-  marsRover.describe("Description: Mars rover is a motor vehicle that travels across the surface of the planet Mars upon arrival.");
+  //Index:   0  1  2
+  List<Spacecraft> spacecraftsList = List();
+  spacecraftsList.add(new Spacecraft ('Voyager I', new DateTime(1977, 9, 5), Color.blue, 'Description: Voyager 1 is a space probe launched by NASA on September 5, 1977. Part of the Voyager program to study the outer Solar System.'));
+  spacecraftsList[0].describe();
 
-  var voyager3 = new Spacecraft.unlaunched('Voyager III');
-  voyager3.describe("Description: Voyager 3 would have been Mariner 13, before the name of the mission was changed.");
+  spacecraftsList.add(new Spacecraft('Mars Rover', new DateTime(2011, 11, 27, 7, 2), Color.red, "Description: Mars rover is a motor vehicle that travels across the surface of the planet Mars upon arrival."));
+  spacecraftsList[1].describe();
 
-
+  spacecraftsList.add(new Spacecraft.unlaunched('Voyager III', 'Description: Voyager 3 would have been Mariner 13, before the name of the mission was changed.'));
+  spacecraftsList[2].describe();
+  
 }
 
 String typesOfColor(Color color) {
