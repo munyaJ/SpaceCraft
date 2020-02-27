@@ -3,7 +3,7 @@
   "packages": [
     {
       "name": "colorize",
-      "rootUri": "file:///C:/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/colorize-2.0.0",
+      "rootUri": "file:///C:/Users/Admin/AppData/Roaming/Pub/Cache/hosted/pub.dartlang.org/colorize-2.0.0",
       "packageUri": "lib/",
       "languageVersion": "2.0"
     },
@@ -14,7 +14,7 @@
       "languageVersion": "2.1"
     }
   ],
-  "generated": "2020-02-14T00:56:08.461331Z",
+  "generated": "2020-02-27T10:22:58.730147Z",
   "generator": "pub",
-  "generatorVersion": "2.7.0"
+  "generatorVersion": "2.7.1"
 }
