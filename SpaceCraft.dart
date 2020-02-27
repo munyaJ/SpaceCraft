@@ -8,10 +8,8 @@ class Spacecraft {
   Color color;
   static String description;
   
-
-  // Constructor, with syntactic sugar for assignment to members.
+  // Default constructor for Spacecraft class
   Spacecraft(String name1, DateTime launchDate1, Color color1, String description1) {
-    // Initialization code goes here.
     name = name1;
     launchDate = launchDate1;
     color = color1;
@@ -55,6 +53,7 @@ class Spacecraft {
         displayText.lightYellow();
         displayText.bgDarkGray();
       }
+      
 
     print(displayText);
     print(typesOfColor(color));
@@ -74,10 +73,10 @@ class Spacecraft {
 } 
 
 main() {
-
-  //Index:   0  1  2  3  4  5
+  // Spacecraft variables
+  // List index:   0  1  2  3  4  5
   List<Spacecraft> spacecraftsList = List();
-  
+
   spacecraftsList.add(new Spacecraft ('Voyager I', new DateTime(1977, 9, 5), Color.blue, 'Description: Voyager 1 is a space probe launched by NASA on September 5, 1977. Part of the Voyager program to study the outer Solar System.'));
   spacecraftsList.add(new Spacecraft('Mars Rover', new DateTime(2011, 11, 27, 7, 2), Color.red, "Description: Mars rover is a motor vehicle that travels across the surface of the planet Mars upon arrival."));
   spacecraftsList.add(new Spacecraft.unlaunched('Voyager III', 'Description: Voyager 3 would have been Mariner 13, before the name of the mission was changed.'));
